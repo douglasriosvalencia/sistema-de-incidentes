@@ -61,6 +61,44 @@ def obtener_incidentes(
     return IncidenteService.obtener_incidentes(
         db
     )
+
+
+# ==================================
+# FILTRAR POR ESTADO
+# ==================================
+@router.get(
+    "/estado/{estado}",
+    response_model=list[IncidenteResponse]
+)
+def obtener_por_estado(
+    estado: str,
+    db: Session = Depends(get_db)
+):
+
+    return IncidenteService.obtener_por_estado(
+        db,
+        estado
+    )
+
+
+# ==================================
+# FILTRAR POR PRIORIDAD
+# ==================================
+@router.get(
+    "/prioridad/{prioridad}",
+    response_model=list[IncidenteResponse]
+)
+def obtener_por_prioridad(
+    prioridad: str,
+    db: Session = Depends(get_db)
+):
+
+    return IncidenteService.obtener_por_prioridad(
+        db,
+        prioridad
+    )
+
+
 # ==================================
 # ESTADISTICAS
 # ==================================
@@ -188,37 +226,4 @@ def obtener_historial(
     return IncidenteService.obtener_historial(
         db,
         incidente_id
-    )
-
-# ==================================
-# FILTRAR POR ESTADO
-# ==================================
-@router.get(
-    "/estado/{estado}",
-    response_model=list[IncidenteResponse]
-)
-def obtener_por_estado(
-    estado: str,
-    db: Session = Depends(get_db)
-):
-
-    return IncidenteService.obtener_por_estado(
-        db,
-        estado
-    )
-# ==================================
-# FILTRAR POR PRIORIDAD
-# ==================================
-@router.get(
-    "/prioridad/{prioridad}",
-    response_model=list[IncidenteResponse]
-)
-def obtener_por_prioridad(
-    prioridad: str,
-    db: Session = Depends(get_db)
-):
-
-    return IncidenteService.obtener_por_prioridad(
-        db,
-        prioridad
     )

@@ -5,7 +5,8 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
+    <meta
+        name="viewport"
         content="width=device-width, initial-scale=1.0">
 
     <title>
@@ -20,7 +21,7 @@
     <!-- Leaflet -->
     <link
         rel="stylesheet"
-        href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 
     <!-- CSS -->
     <link
@@ -31,16 +32,70 @@
 
 <body>
 
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <div class="container">
+
+            <a
+                class="navbar-brand"
+                href="index.html">
+
+                Gestión de Incidentes
+
+            </a>
+
+            <div class="navbar-nav">
+
+                <a
+                    class="nav-link"
+                    href="index.html">
+
+                    Dashboard
+
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="incidentes.html">
+
+                    Incidentes
+
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="crear.html">
+
+                    Crear
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- CONTENIDO -->
+
     <div class="container mt-4">
 
         <h1 class="text-center mb-4">
+
             Gestión de Incidentes Urbanos
+
         </h1>
+
+        <!-- TARJETAS -->
 
         <div class="row">
 
             <div class="col-md-3">
-                <div class="card text-center">
+
+                <div class="card text-center shadow">
+
                     <div class="card-body">
 
                         <h5>Total</h5>
@@ -50,11 +105,15 @@
                         </h2>
 
                     </div>
+
                 </div>
+
             </div>
 
             <div class="col-md-3">
-                <div class="card text-center">
+
+                <div class="card text-center shadow">
+
                     <div class="card-body">
 
                         <h5>Reportados</h5>
@@ -64,11 +123,15 @@
                         </h2>
 
                     </div>
+
                 </div>
+
             </div>
 
             <div class="col-md-3">
-                <div class="card text-center">
+
+                <div class="card text-center shadow">
+
                     <div class="card-body">
 
                         <h5>En Proceso</h5>
@@ -78,11 +141,15 @@
                         </h2>
 
                     </div>
+
                 </div>
+
             </div>
 
             <div class="col-md-3">
-                <div class="card text-center">
+
+                <div class="card text-center shadow">
+
                     <div class="card-body">
 
                         <h5>Resueltos</h5>
@@ -92,65 +159,126 @@
                         </h2>
 
                     </div>
+
                 </div>
+
             </div>
 
         </div>
 
+        <!-- BOTONES -->
+
+        <div class="mt-4">
+
+            <a
+                href="incidentes.html"
+                class="btn btn-primary">
+
+                Ver Incidentes
+
+            </a>
+
+            <a
+                href="crear.html"
+                class="btn btn-success">
+
+                Registrar Incidente
+
+            </a>
+
+        </div>
+
+        <!-- GRÁFICA -->
+
+        <div class="card mt-4 shadow">
+
+            <div class="card-body">
+
+                <h4 class="mb-3">
+
+                    Estado de los Incidentes
+
+                </h4>
+
+                <canvas id="graficaEstados"></canvas>
+
+            </div>
+
+        </div>
+
+        <!-- MAPA -->
+
         <div class="mt-4">
 
             <h3>
+
                 Mapa de Incidentes
+
             </h3>
 
             <div id="map"></div>
 
         </div>
+
+        <!-- TABLA -->
+
         <div class="mt-5">
 
-    <h3>
-        Lista de Incidentes
-    </h3>
+            <h3>
 
-    <table class="table table-striped">
+                Últimos Incidentes
 
-        <thead>
+            </h3>
 
-            <tr>
+            <table class="table table-striped table-hover">
 
-                <th>ID</th>
+                <thead class="table-dark">
 
-                <th>Título</th>
+                    <tr>
 
-                <th>Estado</th>
+                        <th>ID</th>
 
-                <th>Prioridad</th>
+                        <th>Título</th>
 
-            </tr>
+                        <th>Estado</th>
 
-        </thead>
+                        <th>Prioridad</th>
 
-        <tbody id="tabla-incidentes">
+                    </tr>
 
-        </tbody>
+                </thead>
 
-    </table>
+                <tbody id="tabla-incidentes">
 
-</div>
+                </tbody>
+
+            </table>
+
+        </div>
 
     </div>
 
     <!-- Leaflet -->
+
     <script
         src="https://unpkg.com/leaflet/dist/leaflet.js">
     </script>
 
+    <!-- Chart.js -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js">
+    </script>
+
     <!-- JS -->
+
     <script src="js/api.js"></script>
 
     <script src="js/dashboard.js"></script>
 
     <script src="js/map.js"></script>
+
+    <script src="js/tabla.js"></script>
 
 </body>
 
