@@ -12,7 +12,7 @@ async function cargarIncidente() {
 
     const response =
         await fetch(
-            `http://localhost:8000/api/incidentes/${incidenteId}`
+            `https://sistema-de-incidentes.onrender.com/api/incidentes/${incidenteId}`
         );
 
     const incidente =
@@ -57,7 +57,7 @@ document.getElementById(
 
         const responseOriginal =
             await fetch(
-                `http://localhost:8000/api/incidentes/${incidenteId}`
+                `https://sistema-de-incidentes.onrender.com/api/incidentes/${incidenteId}`
             );
 
         const original =
@@ -98,7 +98,7 @@ document.getElementById(
 
         const response =
             await fetch(
-                `http://localhost:8000/api/incidentes/${incidenteId}`,
+                `https://sistema-de-incidentes.onrender.com/api/incidentes/${incidenteId}`,
                 {
                     method: "PUT",
 
@@ -166,7 +166,7 @@ document.getElementById(
 
         const response =
             await fetch(
-                `http://localhost:8000/api/incidentes/${incidenteId}/estado`,
+                `https://sistema-de-incidentes.onrender.com/api/incidentes/${incidenteId}/estado`,
                 {
                     method: "PATCH",
 

@@ -1,4 +1,4 @@
-async function cargarIncidentes(url = "http://localhost:8000/api/incidentes") {
+async function cargarIncidentes(url = "https://sistema-de-incidentes.onrender.com/api/incidentes") {
 
     const response =
         await fetch(url);
@@ -132,7 +132,7 @@ document.getElementById(
         if (estado) {
 
             cargarIncidentes(
-                `http://localhost:8000/api/incidentes/estado/${estado}`
+                `https://sistema-de-incidentes.onrender.com/api/incidentes/estado/${estado}`
             );
 
             return;
@@ -141,7 +141,7 @@ document.getElementById(
         if (prioridad) {
 
             cargarIncidentes(
-                `http://localhost:8000/api/incidentes/prioridad/${prioridad}`
+                `https://sistema-de-incidentes.onrender.com/api/incidentes/prioridad/${prioridad}`
             );
 
             return;

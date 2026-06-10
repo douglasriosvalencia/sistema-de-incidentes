@@ -1,5 +1,5 @@
 const API_URL =
-    "http://localhost:8000/api";
+    "https://sistema-de-incidentes.onrender.com/api";
 
 
 async function obtenerEstadisticas() {

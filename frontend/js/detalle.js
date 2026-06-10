@@ -11,7 +11,7 @@ async function cargarDetalle() {
 
     const response =
         await fetch(
-            `http://localhost:8000/api/incidentes/${incidenteId}`
+            `https://sistema-de-incidentes.onrender.com/api/incidentes/${incidenteId}`
         );
 
     const incidente =
@@ -73,7 +73,7 @@ async function cargarHistorial() {
 
     const response =
         await fetch(
-            `http://localhost:8000/api/incidentes/${incidenteId}/historial`
+            `https://sistema-de-incidentes.onrender.com/api/incidentes/${incidenteId}/historial`
         );
 
     const historial =

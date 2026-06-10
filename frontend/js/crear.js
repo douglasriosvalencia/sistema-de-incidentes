@@ -11,7 +11,7 @@ async function cargarTiposIncidente() {
 
         const response =
             await fetch(
-                "http://localhost:8000/api/tipos-incidente"
+                "https://sistema-de-incidentes.onrender.com/api/tipos-incidente"
             );
 
         const tipos =
@@ -231,7 +231,7 @@ document.getElementById(
 
             const response =
                 await fetch(
-                    "http://localhost:8000/api/incidentes",
+                    "https://sistema-de-incidentes.onrender.com/api/incidentes",
                     {
                         method: "POST",
 
