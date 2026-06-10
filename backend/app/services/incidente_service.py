@@ -2,8 +2,8 @@ from datetime import datetime
 
 from sqlalchemy.orm import Session
 
-from backend.app.models.incidente import Incidente
-from backend.app.models.historial_estado import HistorialEstado
+from app.models.incidente import Incidente
+from app.models.historial_estado import HistorialEstado
 
 
 class IncidenteService:

@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 
-from backend.app.models.tipo_incidente import TipoIncidente
+from app.models.tipo_incidente import TipoIncidente
 
 
 class TipoIncidenteService:

@@ -10,7 +10,7 @@ from sqlalchemy import (
 
 #from sqlalchemy.orm import relationship
 
-from backend.app.models.base import Base
+from app.models.base import Base
 
 
 class Incidente(Base):

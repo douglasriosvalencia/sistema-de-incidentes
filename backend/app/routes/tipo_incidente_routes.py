@@ -2,13 +2,13 @@ from fastapi import APIRouter, Depends
 
 from sqlalchemy.orm import Session
 
-from backend.app.config.database import get_db
+from app.config.database import get_db
 
-from backend.app.schemas.tipo_incidente_schema import (
+from app.schemas.tipo_incidente_schema import (
     TipoIncidenteResponse
 )
 
-from backend.app.services.tipo_incidente_service import (
+from app.services.tipo_incidente_service import (
     TipoIncidenteService
 )
 

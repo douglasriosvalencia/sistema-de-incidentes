@@ -2,9 +2,9 @@ from fastapi import APIRouter, Depends, HTTPException
 
 from sqlalchemy.orm import Session
 
-from backend.app.config.database import get_db
+from app.config.database import get_db
 
-from backend.app.schemas.incidente_schema import (
+from app.schemas.incidente_schema import (
     IncidenteCreate,
     IncidenteResponse,
     IncidenteUpdate,
@@ -13,7 +13,7 @@ from backend.app.schemas.incidente_schema import (
     EstadisticasResponse
 )
 
-from backend.app.services.incidente_service import IncidenteService
+from app.services.incidente_service import IncidenteService
 
 router = APIRouter(
     prefix="/api/incidentes",
